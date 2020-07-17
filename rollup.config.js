@@ -6,6 +6,7 @@ import babel from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
+const { preprocess } = require('./svelte.config');
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
@@ -29,6 +30,7 @@ export default {
         dev,
         hydratable: true,
         emitCss: true,
+        preprocess,
       }),
       resolve({
         browser: true,
@@ -60,10 +62,7 @@ export default {
           ],
         }),
 
-      !dev &&
-        terser({
-          module: true,
-        }),
+      !dev && terser({ module: true }),
     ],
 
     preserveEntrySignatures: false,
@@ -81,6 +80,7 @@ export default {
       svelte({
         generate: 'ssr',
         dev,
+        preprocess,
       }),
       resolve({
         dedupe: ['svelte'],
@@ -109,7 +109,7 @@ export default {
       !dev && terser(),
     ],
 
-    preserveEntrySignatures: false,
+    preserveEntrySignatures: 'strict',
     onwarn,
   },
 };
