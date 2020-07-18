@@ -8,6 +8,8 @@ const urlSchema = new Schema({
   shortUrl: {
     type: String,
     required: true,
+    unique: true,
+    maxlength: 100,
   },
   clicks: {
     type: Number,

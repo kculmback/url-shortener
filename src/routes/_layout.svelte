@@ -5,5 +5,7 @@
 <GlobalStyle />
 
 <main>
-  <slot />
+  <div class="container mx-auto my-8">
+    <slot />
+  </div>
 </main>

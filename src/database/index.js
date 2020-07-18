@@ -18,6 +18,7 @@ export async function connectToDatabase(uri = process.env.MONGODB_URI) {
     await mongoose.connect(uri, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      useCreateIndex: true,
     });
   } catch (error) {
     console.log(error);
