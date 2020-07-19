@@ -1,7 +1,7 @@
 <script>
   import ErrorAlert from "../components/ErrorAlert.svelte";
 
-  let url = "www.google.com";
+  let url = "";
   let customShortUrl = "";
   let loading = false;
   let success = null;
@@ -25,7 +25,6 @@
 
     if (response.status === 200) {
       success = { ...data };
-      console.log(success);
       url = "";
       customShortUrl = "";
       return;
@@ -58,7 +57,8 @@
     <span class="font-bold text-lg mb-1 block">URL</span>
     <input
       bind:value={url}
-      class="block w-full rounded-lg p-4 shadow-md {validationErrors.url ? 'border-2 border-red-500' : ''}"
+      class="block w-full rounded-lg p-4 shadow-md {validationErrors.url ? 'border-2 border-red-500' : ''}
+      dark:bg-gray-300 dark:border-gray-300 dark:text-gray-900"
       type="text"
       placeholder="www.example.com"
       required />
@@ -72,7 +72,8 @@
       <span class="mr-4 flex-grow flex-shrink-0">k-c.dev/</span>
       <input
         bind:value={customShortUrl}
-        class="block w-full rounded-lg p-4 shadow-md {validationErrors.customShortUrl ? 'border-2 border-red-500' : ''}"
+        class="block w-full rounded-lg p-4 shadow-md {validationErrors.customShortUrl ? 'border-2 border-red-500' : ''}
+        dark:bg-gray-300 dark:border-gray-300 dark:text-gray-900"
         type="text"
         placeholder="soCustom"
         minlength="5"

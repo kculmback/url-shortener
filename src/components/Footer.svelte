@@ -4,7 +4,7 @@
     <a
       href="https://github.com/kculmback/url-shortener"
       target="github"
-      class="text-green-500 font-bold hover:underline"
+      class="text-teal-500 dark:text-teal-400 font-bold hover:underline"
       rel="noopener nofollow noreferrer">
       Github
     </a>
@@ -14,7 +14,7 @@
     <a
       href="https://kaseyculmback.com"
       target="kc"
-      class="text-green-500 font-bold hover:underline">
+      class="text-teal-500 dark:text-teal-400 font-bold hover:underline">
       Kasey Culmback
     </a>
   </p>

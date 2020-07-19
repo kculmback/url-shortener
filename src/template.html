@@ -19,7 +19,9 @@
 	     the current page has one -->
     %sapper.head%
   </head>
-  <body class="bg-gray-100 text-gray-800 font-medium h-full">
+  <body
+    class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-medium h-full transition-colors duration-150"
+  >
     <!-- The application will be rendered inside this element,
 	     because `src/client.js` references it -->
     <div id="sapper" class="h-full">%sapper.html%</div>

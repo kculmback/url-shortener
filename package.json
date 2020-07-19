@@ -23,6 +23,7 @@
     "polka": "next",
     "sirv": "^0.4.0",
     "tailwindcss": "^1.5.1",
+    "tailwindcss-dark-mode": "git+https://github.com/kculmback/tailwindcss-dark-mode.git#feature/watch-dark-mode",
     "validator": "^13.1.1"
   },
   "devDependencies": {
