@@ -10,7 +10,7 @@ const dev = NODE_ENV === 'development';
 
 connectToDatabase();
 
-polka() // You can also use Express
+const app = polka() // You can also use Express
   .use(
     json(),
     compression({ threshold: 0 }),
@@ -20,3 +20,5 @@ polka() // You can also use Express
   .listen(PORT, (err) => {
     if (err) console.log('error', err);
   });
+
+export default app.handler;
