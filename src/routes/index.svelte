@@ -50,7 +50,7 @@
   <title>URL Shortener</title>
 </svelte:head>
 
-<h1 class="text-center text-5xl font-black">URL Shortener</h1>
+<h1 class="text-center text-5xl font-black leading-tight">URL Shortener</h1>
 
 <form class="my-4 mx-auto max-w-xl" on:submit|preventDefault={submitUrl}>
   <label class="block my-6">

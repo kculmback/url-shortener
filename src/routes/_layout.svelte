@@ -5,7 +5,7 @@
 
 <GlobalStyle />
 
-<main class="h-full flex flex-col">
+<main class="h-full flex flex-col px-8">
   <div class="container mx-auto my-8 flex-grow flex-shrink-0">
     <slot />
   </div>
