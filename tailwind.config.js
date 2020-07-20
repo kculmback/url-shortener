@@ -1,7 +1,7 @@
 const defaults = require('tailwindcss/stubs/defaultConfig.stub');
 
 module.exports = {
-  purge: [],
+  purge: ['./src/**/*.svelte', './src/**/*.html'],
   theme: {
     extend: {},
   },
